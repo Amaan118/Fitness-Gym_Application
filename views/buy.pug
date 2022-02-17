@@ -1,0 +1,84 @@
+extends navbar.pug
+
+block title
+    title Join Now ! | Best prices & offers 
+
+block style 
+    link(rel="stylesheet", href="css/buy.css")
+
+
+block body
+    section#packages
+        p.text-center.heading Choose Your Plan
+
+        div.container
+            form(action="/buy?plan=novice&price=1000" method="post").plan
+                p.text-center.price Rs. 1000/Month
+                p.text-center.sub-heading Novice/Newbie 
+                ul 
+                    li.features Full Body Workouts
+                    li.features Access to 75% Gym Equipments
+                    li.features 1 Month Diet Plan
+                 
+                button.btn(type="submit") Buy
+                 
+            form(action="/buy?plan=amateur&price=2500" method="post").plan
+                p.text-center.price Rs. 2500/Month
+                p.text-center.sub-heading Amateur
+                ul 
+                    li.features Full Body Workouts
+                    li.features Access to all Gym Equipments
+                    li.features 6 Month Diet Plan
+                 
+                button.btn(type="submit") Buy
+
+            form(action="/buy?plan=pro&price=5000" method="post").plan
+                p.text-center.price Rs. 5000/Month
+                p.text-center.sub-heading Professional 
+                ul 
+                    li.features Full Body Workouts
+                    li.features Access to all Gym Equipments
+                    li.features 12 Month Diet Plan + Personal Trainer
+                
+                button.btn(type="submit") Buy
+
+    section#compare 
+        p.text-center.heading Compare Plans
+        table.compare-table
+            thead 
+                tr.table-headings
+                    th.text-center Feature
+                    th.text-center Novice 
+                    th.text-center Amateur 
+                    th.text-center Professional 
+            tbody 
+                tr.table-data
+                    td.text-center Upper Body Workout
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                tr.table-data
+                    td.text-center Lower Body Workout
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                tr.table-data
+                    td.text-center Diet Plan
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                tr.table-data
+                    td.text-center Access to All Equipments
+                    td.text-center.x X
+                    td.text-center &#10004;
+                    td.text-center &#10004;
+                tr.table-data
+                    td.text-center Discount on Gym Nutritional Products
+                    td.text-center.x X
+                    td.text-center.x X
+                    td.text-center &#10004;
+                tr.table-data
+                    td.text-center Personal Trainer
+                    td.text-center.x X
+                    td.text-center.x X
+                    td.text-center &#10004;

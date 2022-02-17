@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;600&display=swap');
+/* CSS Reset */
+
+:root {
+    --badam: antiquewhite;
+    --pitch-black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('../images/register-bg1.jpg') no-repeat center center/cover;
+    font-family: 'Genos', sans-serif;
+    backdrop-filter: blur(2px);
+}
+
+
+/* Flash Messages */
+
+.messages {
+    width: 100%;
+}
+
+
+.alert {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #fff2f2;
+    border-radius: 15px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.success {
+    background: rgba(0, 229, 97, 0.9);
+}
+
+.fail {
+    background: rgba(246, 71, 71, 0.9);
+}
+
+.info {
+    background: rgba(68, 133, 249);
+}
+
+#cut {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transform: translate(-10px, -2px);
+}
+
+
+/* Login Box */
+
+.container {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    min-height: 90vh;
+}
+
+.data {
+    display: grid;
+    place-content: center;
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+
+.data h1 {
+    text-align: center;
+    color: var(--pitch-black);
+    font-size: 3.5rem;
+    padding: .5rem 0;
+    border-bottom: 2px dashed var(--pitch-black);
+    grid-column: 1 / span 2;
+}
+
+.container1, .container2 {
+    width: 90%;
+}
+
+
+.box {
+    margin-top: 1rem;
+}
+
+.box ion-icon {
+    font-size: 3em;
+    color: var(--pitch-black);
+}
+
+.user-data {
+    font-family: 'Genos', sans-serif;
+    color: var(--badam);
+    background: none;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--pitch-black);
+    font-size: 2em;
+    margin: 0 .5rem;
+    padding: 0 .5rem;
+    width: 90%;
+}
+
+.user-data:hover, .user-data:focus {
+    border-bottom: 1px solid var(--badam);
+    color: var(--badam);
+}
+
+::placeholder {
+    color: var(--pitch-black);
+    opacity: 0.8;
+}
+
+/* Login Button */
+
+.btn-container {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--badam);
+}
+
+.btn {
+    font-family: 'Genos', cursive;
+    padding: .5rem 1rem;
+    background: none;
+    outline: none;
+    border: 2px solid var(--badam);
+    border-radius: .7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--badam);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.btn:hover {
+    color: var(--badam);
+    background: var(--pitch-black);
+    box-shadow: 0px 0px 17px -4px var(--badam);
+    border: 2px solid var(--badam);
+}
+
+.login {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.login p {
+    color: var(--badam);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.login a {
+    text-decoration: none;
+}
+
+/* Footer */
+
+#footer {
+    color: var(--pitch-black);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+}
+
+#footer p {
+    font-size: 1rem;
+    color: var(--badam);
+}
+
+#footer a {
+    color: var(--pitch-black);
+    text-decoration: none;
+}
+
+.gymlink {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#fff, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width:1000px) {
+    body {
+        background: url('../images/register-bg2.jpg') no-repeat center center/cover;
+    }
+
+    .container {
+        width: 95vw;
+        flex-direction: column;
+    }
+
+    .success, .fail, .info {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .data h1 {
+        color: var(--badam);
+        width: 75%;
+        font-size: 2.3rem;
+        margin: 1rem 0;
+        border-bottom: 2px dashed var(--badam);
+        text-align: center;
+        text-shadow: 0 0 16px var(--pitch-black);
+    }
+
+    .box {
+        margin: 0.5rem auto;
+    }
+
+    .box ion-icon {
+        font-size: 2.5rem;
+    }
+
+    .user-data {
+        font-size: 1.5rem;
+        padding: .2rem 0.5rem;
+        border-bottom: 1px solid var(--badam);
+        color: var(--badam);
+        text-shadow: 0 0 9px var(--pitch-black);
+    }
+
+    ::placeholder {
+        color: var(--badam);
+        opacity: 0.8;
+    }
+
+    .btn-container {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--badam);
+    }
+
+    .btn {
+        font-size: 1rem;
+        color: var(--badam);
+        border: 2px solid var(--badam);
+    }
+
+    .login {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login p {
+        color: var(--badam);
+    }
+
+    /* Footer */
+
+    #footer p {
+        font-size: 0.8rem;
+        color: var(--badam);
+    }
+
+    #footer a {
+        font-size: 0.8rem;
+        color: var(--badam);
+    }
+
+    .gymlink {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+}

@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="images/logo1.jpeg", type="image/x-icon")
+        link(rel="stylesheet", href="css/navbar.css")
+        script(src="javascript/cut_btn.js" defer) 
+        
+        block title
+        block style
+        
+        block script
+    
+    body
+        nav#navigation 
+            ul.nav 
+                img.logo(src="images/logo2.png", alt="Magic Gym")
+                li.item 
+                    a(href="/") Home
+                li.item 
+                    a(href="/about") About Us
+                li.item 
+                    a(href="/contact") Contact Us 
+                li.item 
+                    a(href="/buy") Buy Membership
+                if(isAuthenticated)
+                    li.item 
+                        a(href="/end_session") Logout
+                else
+                    li.item
+                        a(href="/login") Login
+
+        block body        
+
+        footer#footer
+            p.text-center © All Copyrights Reserved |
+            a(href="/") MagicFitnessGym.com - 2021

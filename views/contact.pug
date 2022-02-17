@@ -1,0 +1,41 @@
+extends navbar.pug
+
+block title
+    title Contact Us | Feedback
+
+block style 
+    link(rel="stylesheet", href="css/contact.css")
+
+
+block body
+    div.container
+        != messages('message', locals)
+
+        p.text-center.heading Contact Form
+        form(action="/contact", method="post")
+            div.data
+                label.text-center.sub-heading(for="name") Name <span class="mandatory">*</span>
+                input.text-center.enter(type="text", name="name", placeholder="Ravi Prasad", required)
+
+            div.data
+                label.text-center.sub-heading(for="age" ) Age <span class="mandatory">*</span>
+                input.text-center.enter(type="text", name="age", placeholder="24", required)
+
+            div.data
+                label.text-center.sub-heading(for="contact") Contact Number <span class="mandatory">*</span>
+                input.text-center.enter(type="text", name="contact", placeholder="7522014568", required)
+
+            div.data
+                label.text-center.sub-heading(for="email") Personal Email <span class="mandatory">*</span>
+                input.text-center.enter(type="email", name="email", placeholder="raviprasad@gmail.com", required)
+
+            div.data
+                label.text-center.sub-heading(for="address") Address <span class="mandatory">*</span>
+                input.text-center.enter(type="text", name="address", placeholder="XYZ Colony near Famous Mall, Solapur", required)
+
+            div.data
+                label.text-center.sub-heading(for="message") Describe your message <span class="mandatory">*</span>
+                textarea.text-center.enter-text(name="message", cols="30", rows="10", placeholder="I had bought the Magic Fitness Gym Membership in October but due to some personal issues I want to cancle the Membership", required)
+
+            div.btn-container
+                button.btn(type="submit") Send Message

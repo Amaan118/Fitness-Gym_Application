@@ -1,0 +1,27 @@
+{
+  "name": "magic-gym",
+  "version": "1.0.0",
+  "description": "This is the best gym in the world.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,json,ejs,pug"
+  },
+  "author": "Amaan Khan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "nodemailer": "^6.7.1",
+    "pug": "^3.0.2",
+    "validator": "^13.7.0"
+  }
+}

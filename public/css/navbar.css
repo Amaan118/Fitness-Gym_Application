@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* CSS Reset */
+:root {
+    --badam: antiquewhite;
+    --pitch-black: #000;
+    --grey: rgba(0, 0, 0, 0.75);
+    --dim-grey: rgba(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Lobster', cursive;
+}
+
+
+/* Flash Messages */
+
+.messages {
+    width: 100%;
+}
+
+.alert {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #fff2f2;
+    border-radius: 15px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.success {
+    background: rgba(0, 229, 97, 0.9);
+}
+
+.fail {
+    background: rgba(246, 71, 71, 0.9);
+}
+
+.info {
+    background: rgba(68, 133, 249);
+}
+
+#cut {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transform: translate(-10px, -2px);
+}
+
+
+/* Utility Classes */
+
+.text-center {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Navigation Bar */
+
+#navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--badam);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.logo {
+    width: 5%;
+    margin: 0 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px -1px var(--pitch-black);
+}
+
+.item {
+    margin: 0 .5rem;
+}
+
+.item a {
+    text-decoration: none;
+    color: var(--pitch-black);
+    font-size: 1.1rem;
+    padding: 5px 16px;
+    border: 2px solid var(--pitch-black);
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.item a:hover, .active {
+    color: var(--badam);
+    background-color: var(--pitch-black);
+    border: 2px solid var(--badam);
+    outline: none;
+    box-shadow: 0px 0px 18px -3px var(--pitch-black);
+}
+
+/* Footer */
+
+#footer {
+    background-color: var(--badam);
+    border: 1px solid var(--pitch-black);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    font-size: 1rem;
+}
+
+#footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--pitch-black);
+}
+
+@media screen and (max-width:1000px) {
+    /* Navigation Bar */
+
+    #navigation {
+        height: 3rem;
+    }
+
+    .success, .danger, .info {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .item {
+        margin: 2px;
+    }
+
+    .item a {
+        font-size: 0.8rem;
+        padding: 7px;
+    }
+
+    /* Footer */
+
+    #footer p {
+        font-size: 0.8rem;
+    }
+
+    #footer a {
+        font-size: 0.8rem;
+    }
+}

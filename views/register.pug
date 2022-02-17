@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="images/logo1.jpeg", type="image/x-icon")
+        link(rel="stylesheet", href="css/register.css")
+        script(src="javascript/cut_btn.js" defer) 
+
+        script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer)
+        script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer)
+        
+        title Register Now! | Sign Up | Magic Fitness Gym 
+
+    body
+        != messages('message', locals)
+
+        .container 
+            form.data(action="/register", method="post", autocomplete="off")
+                h1 Register at MFG
+                div.container1
+                    div.box
+                        input.user-data(type="text", name="username", placeholder="Enter Username" required)
+                    div.box
+                        input.user-data(type="email", name="email", placeholder="Enter Email" required)
+                    div.box
+                        input.user-data(type="number", name="age", placeholder="Enter Age" required)
+                    div.box
+                        input.user-data(type="text", name="height", placeholder="Enter Height in cm" required)
+                    div.box
+                        input.user-data(type="text", name="weight", placeholder="Enter Weight in kg" required)
+                div.container2
+                    div.box
+                        input.user-data(type="text", name="bmi", placeholder="Enter BMI" required)
+                    div.box
+                        input.user-data(type="text", name="contact", placeholder="Enter Contact Number" required)
+                    div.box
+                        input.user-data(type="password", name="password", placeholder="Enter Password" required)
+                    div.box
+                        input.user-data(type="password", name="confirm_pass", placeholder="Confirm Password" required)
+
+                div.btn-container
+                    button.btn(type="submit") Register
+
+            div.login
+                p.text-center Already have an account?
+                a(href="/login").btn Login
+
+        footer#footer
+            p.text-center © All Copyrights Reserved
+            a(href="/") <span class="gymlink"> MagicFitnessGym.com - 2021</span>

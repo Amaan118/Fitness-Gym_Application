@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;600&display=swap');
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    font-family: 'Genos', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+main::before {
+    content: "";
+    background: url("../images/form-bg.jpeg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.25;
+    z-index: -2;
+}
+
+/* Form */
+
+.heading {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-weight: 600;
+    border-bottom: 2px dashed var(--pitch-black);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 83vh;
+    flex-direction: column;
+    background: rgba(250, 235, 215, 0.25);
+}
+
+form {
+    width: 75%;
+}
+
+marquee {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: var(--grey);
+    border-bottom: 1px dotted var(--pitch-black);
+    width: 50%;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+    font-weight: 600;
+}
+
+.enter {
+    border: 2px solid var(--pitch-black);
+    font-family: Genos, cursive;
+    font-weight: 600;
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1.2em;
+    outline: none;
+    background: linear-gradient(45deg, var(--badam), #fff);
+    border-radius: 0.7em;
+    margin-bottom: 0.5rem;
+}
+
+.enter:hover, .enter:focus {
+    box-shadow: 0 0 11px -3px var(--grey);
+}
+
+.disable {
+    font-size: 1.3em;
+}
+
+::placeholder {
+    color: black;
+    opacity: .6;
+}
+
+.btn-container {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.btn {
+    font-family: 'Genos';
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 50%;
+    padding: 0.4rem 0;
+    background: linear-gradient(45deg, var(--badam), transparent);
+    outline: none;
+    border: 2px solid var(--pitch-black);
+    border-radius: 0.7em;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--pitch-black);
+    color: var(--badam);
+    text-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 30px -2px var(--pitch-black);
+}
+
+.mandatory {
+    color: rgba(246, 71, 71, 0.9);
+    font-weight: bold;
+}
+
+@media screen and (max-width:1000px) {
+    main {
+        min-height: 85vh;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    marquee {
+        width: 95%;
+        font-size: 1em;
+    }
+
+    .data {
+        margin: 0.5rem 0;
+    }
+
+    .sub-heading {
+        font-size: 1rem;
+    }
+
+    .enter, .enter-text {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        width: 95%;
+    }
+
+    .btn {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+}

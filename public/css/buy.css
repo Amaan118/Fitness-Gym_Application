@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100&display=swap');
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Price Section */
+
+#packages {
+    font-family: 'Genos', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-size: 3rem;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(45deg, var(--badam), var(--dim-grey));
+    width: 90%;
+    margin: auto;
+    border-radius: 2rem;
+    border: 2px solid var(--pitch-black);
+    box-shadow: 0px 0px 25px -4px var(--pitch-black);
+}
+
+.plan {
+    color: var(--badam);
+    font-weight: 900;
+    font-size: 2rem;
+    border: 2px solid var(--pitch-black);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: var(--grey);
+    outline: none;
+    width: 30%;
+    transition: all 0.5s;
+}
+
+.plan:hover {
+    color: var(--pitch-black);
+    background: var(--badam);
+    box-shadow: 0px 0px 13px 3px var(--pitch-black);
+}
+
+.plan ul {
+    list-style: none;
+}
+
+.features {
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 3rem;
+    text-shadow: 0px 0px 10px var(--badam);
+}
+
+.sub-heading {
+    font-size: 2.2rem;
+    text-shadow: 0px 0px 10px var(--badam);
+    padding: 1rem 0;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.25rem 2rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid var(--pitch-black);
+    outline: none;
+    color: var(--grey);
+    background: var(--badam);
+}
+
+/* Comparison Section */
+
+#compare {
+    font-family: 'Genos', sans-serif;
+}
+
+.compare-table {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.table-headings {
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--grey);
+    color: var(--badam);
+    text-shadow: 0px 0px 10px var(--badam);
+}
+
+.table-data {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, var(--badam), var(--dim-grey));
+}
+
+.x {
+    font-size: 2rem;
+}
+
+@media screen and (max-width:1000px) {
+    #packages {
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 90%;
+        /* font-size: 1rem; */
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .sub-heading {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .features {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .compare-table {
+        width: 95%;
+    }
+
+    .table-headings {
+        font-size: 1.2rem;
+    }
+
+    .table-data {
+        font-size: 1rem;
+    }
+
+    .x {
+        font-size: 1.3rem;
+    }
+}

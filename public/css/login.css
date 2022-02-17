@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;600&display=swap');
+/* CSS Reset */
+
+:root {
+    --badam: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url('../images/login-bg2.jpg') no-repeat center center/cover;
+    font-family: 'Genos', sans-serif;
+}
+
+
+/* Flash Messages */
+
+.messages {
+    width: 100%;
+}
+
+
+.alert {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #fff2f2;
+    border-radius: 15px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.success {
+    background: rgba(0, 229, 97, 0.9);
+}
+
+.fail {
+    background: rgba(246, 71, 71, 0.9);
+}
+
+.info {
+    background: rgba(68, 133, 249);
+}
+
+#cut {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transform: translate(-10px, -2px);
+}
+
+
+/* Login Box */
+
+.container {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    min-height: 90vh;
+}
+
+.logo-container {
+    text-align: center;
+    order: 2;
+    width: 50%;
+}
+
+.logo {
+    width: 50%;
+    filter: drop-shadow(2px 4px 6px black);
+    border-radius: 50%;
+    box-shadow: 0 0 33px -7px var(--badam);
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.data h1 {
+    color: var(--badam);
+    font-size: 3.5rem;
+    padding: .5rem 0;
+    border-bottom: 2px dashed var(--badam);
+    /* width: 50%; */
+}
+
+.box {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.box ion-icon {
+    font-size: 3em;
+    color: var(--badam);
+}
+
+.user-data {
+    font-family: 'Genos', sans-serif;
+    color: var(--badam);
+    background: none;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--badam);
+    font-size: 2em;
+    margin: 0 .5rem;
+    padding: 0 .5rem;
+    width: 75%;
+}
+
+.user-data:hover, .user-data:focus {
+    border-bottom: 1px solid grey;
+}
+
+::placeholder {
+    color: var(--badam);
+    opacity: 0.8;
+}
+
+/* Login Button */
+
+.btn-container {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--badam);
+}
+
+.btn {
+    font-family: 'Genos', cursive;
+    padding: .5rem 1rem;
+    background: none;
+    outline: none;
+    border: 2px solid var(--badam);
+    border-radius: .7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--badam);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.btn:hover {
+    color: black;
+    background: var(--badam);
+    box-shadow: 0px 0px 17px -4px var(--badam);
+    border: 2px solid black;
+}
+
+.register {
+    padding: 1rem 0;
+}
+
+.register p {
+    color: var(--badam);
+    font-size: 1.3rem;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+.register a {
+    text-decoration: none;
+}
+
+/* Footer */
+
+#footer {
+    color: var(--badam);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+}
+
+#footer p {
+    font-size: 1rem;
+}
+
+#footer a {
+    color: var(--badam);
+    text-decoration: none;
+}
+
+.gymlink {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(var(--badam), #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width:1000px) {
+    body {
+        background: url('../images/login-bg1.jpg') no-repeat center center/cover;
+        backdrop-filter: blur(2px);
+    }
+
+    .container {
+        width: 95vw;
+        flex-direction: column;
+    }
+
+    .success, .fail, .info {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+
+    .logo-container {
+        padding: 0;
+        text-align: center;
+        order: 0;
+    }
+
+    .logo {
+        width: 65%;
+    }
+
+    .data {
+        width: 100%;
+        transform: translateY(0);
+        align-items: center;
+    }
+
+    .data h1 {
+        width: 75%;
+        font-size: 2rem;
+        margin: 1rem 0;
+        border-bottom: 2px dashed var(--badam);
+        text-align: center;
+    }
+
+    .box {
+        margin: 0.5rem auto;
+        justify-content: center;
+    }
+
+    .box ion-icon {
+        font-size: 2.5rem;
+    }
+
+    .user-data {
+        font-size: 1.2rem;
+        transform: translateY(0);
+        padding: .2rem 0.5rem;
+    }
+
+    .btn-container {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .register {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+
+    #footer p {
+        font-size: 0.8rem;
+    }
+
+    #footer a {
+        font-size: 0.8rem;
+    }
+
+    .gymlink {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        -webkit-text-fill-color: var(--badam);
+    }
+}

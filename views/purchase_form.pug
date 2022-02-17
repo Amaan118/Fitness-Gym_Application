@@ -1,0 +1,59 @@
+extends navbar.pug
+
+block title 
+    title Purchase #{details.plan} Pack | Join the Elites
+
+block style 
+    link(rel="stylesheet", href="css/purchase_form.css")
+
+block script
+    script(src="javascript/cut_btn.js" defer) 
+
+block body
+    main
+        != messages('message', locals)        
+
+        div.container
+            p.text-center.heading Purchase #{details.plan} Pack
+            form(action="/purchase", method="post")
+                p.text-center
+                    marquee All the data of our users purchase are kept safe and secret at our system. Mandatory fields are marked by <span class="mandatory">*</span>
+                div.data
+                    label.text-center.sub-heading(for="name") Name of Customer <span class="mandatory">*</span>
+                    input.text-center.enter(type="text", name="name", value=details.customer, required)
+
+                div.data
+                    label.text-center.sub-heading(for="contact") Customer Contact Number <span class="mandatory">*</span>
+                    input.text-center.enter(type="text", name="contact", required)
+
+                div.data
+                    label.text-center.sub-heading(for="email") Personal Email <span class="mandatory">*</span>
+                    input.text-center.enter(type="email", name="email",value=details.email ,required)
+
+                div.data
+                    label.text-center.sub-heading(for="address") Address <span class="mandatory">*</span>
+                    input.text-center.enter(type="text", name="address", required)
+
+                div.data
+                    label.text-center.sub-heading(for="price") Price
+                    input.text-center.enter.disable(type="tel", name="price", value=details.price, disabled)
+
+                data.data
+                    label.text-center.sub-heading(for="features") #{details.plan} Pack offers
+                    select.enter(name='features')
+                        option.text-center(value=0) Features
+                        each val in details.features
+                            option.text-center(value=val, disabled)=val
+
+                data.data
+                    label.text-center.sub-heading(for="payment") Select Payment Method <span class="mandatory">*</span>
+                    select.enter(name='payment_method', required)
+                        option.text-center(value='cod') Cash on delievery
+                        option.text-center(value='upi') UPI
+                        option.text-center(value='paypal') Paypal
+                
+                input(type="hidden", name="price", value=details.price)
+                input(type="hidden", name="pack", value=details.plan)
+
+                div.btn-container
+                    button.btn(type="submit") Purchase

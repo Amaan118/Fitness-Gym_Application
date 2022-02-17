@@ -1,0 +1,121 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* About Section */
+
+#about {
+    min-height: 90vh;
+    background: url('../images/about.jpg') no-repeat center center/cover;
+    padding-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(1rem);
+}
+
+.heading {
+    color: white;
+    font-weight: lighter;
+    font-size: 3rem;
+    text-shadow: 0px 0px 5px white;
+}
+
+.sub-heading {
+    color: white;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 5px black;
+}
+
+.story, .work {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 25px -2px antiquewhite;
+    border: 2px solid antiquewhite;
+    margin: 1rem 0;
+}
+
+/* Achieve Section */
+
+.achieve {
+    width: 50%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-1rem);
+}
+
+.record {
+    padding: 1rem;
+    border: 2px solid antiquewhite;
+    margin: 1rem;
+    width: 50%;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 25px -2px antiquewhite;
+}
+
+@media screen and (max-width:1000px) {
+
+    /* About Section */
+    #about {
+        flex-direction: column;
+        padding: 1rem 0;
+        display: block;
+        margin: auto;
+    }
+
+    .container {
+        width: 90%;
+        transform: translateX(0);
+        margin: 1rem auto;
+    }
+
+    .story, .work {
+        margin: 0.5rem 0;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .sub-heading {
+        font-size: 1rem;
+    }
+
+    /* Achieve Section */
+
+    .achieve {
+        width: 90%;
+        transform: translateX(0);
+        margin: auto;
+        min-height: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .record {
+        padding: 0.5rem 0;
+        margin: 0.5rem 0;
+    }
+}

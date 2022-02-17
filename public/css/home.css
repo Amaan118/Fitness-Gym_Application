@@ -1,0 +1,132 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("../images/home-bg.jpg") no-repeat center center/cover;
+    backdrop-filter: blur(2px);
+}
+
+/* Main Section */
+
+main {
+    min-height: 90vh;
+}
+
+#main {
+    min-height: 45vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container {
+    width: 8rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 2px #4e4d4d;
+    transition: all 0.5s;
+}
+
+.container:hover {
+    filter: invert(100%);
+}
+
+.heading {
+    font-size: 4rem;
+    color: var(--badam);
+    text-shadow: 2px 1px 8px var(--pitch-black);
+    transition: all 0.5s;
+}
+
+
+.sub-heading {
+    font-size: 1.2rem;
+    color: var(--pitch-black);
+    text-shadow: 6px 2px 15px var(--pitch-black);
+}
+
+/* Faciltites  Section*/
+
+#services {
+    background-color: var(--badam);
+    min-height: 45vh;
+}
+
+.header {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.step {
+    border: 2px solid white;
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+    background-color: var(--pitch-black);
+    box-shadow: 0px 0px 19px 0px;
+}
+
+.step p {
+    color: white;
+    text-shadow: 6px 2px 15px white;
+}
+
+.step img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 12%;
+    filter: invert(1);
+}
+
+@media screen and (max-width:1000px) {
+    /* Main Section */
+
+
+    .container {
+        width: 30%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    /* Services Section */
+
+    .options {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .sub-heading {
+        color: var(--badam);
+        font-size: 1rem;
+    }
+
+    .step {
+        margin: 1rem;
+    }
+
+    .step img {
+        width: 8rem;
+        height: 8rem;
+    }
+}

@@ -1,0 +1,131 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Form */
+
+.heading {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-shadow: 0px 0px 5px var(--pitch-black);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 83vh;
+    flex-direction: column;
+    background: rgba(250, 235, 215, 0.5);
+}
+
+form {
+    width: 75%;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+}
+
+.enter {
+    border: 2px solid var(--pitch-black);
+    font-family: 'Lobster', cursive;
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    background: linear-gradient(45deg, var(--badam), transparent);
+    border-radius: 1.5rem;
+    color: var(--pitch-black);
+    font-weight: lighter;
+}
+
+.enter-text {
+    border: 2px solid var(--pitch-black);
+    font-family: 'Lobster', cursive;
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    background: linear-gradient(45deg, var(--badam), transparent);
+    border-radius: 1.5rem;
+    color: var(--pitch-black);
+    font-weight: lighter;
+    height: 7rem;
+}
+
+.btn-container {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.btn {
+    font-family: 'Lobster';
+    font-size: 1rem;
+    width: 50%;
+    padding: 0.4rem 0;
+    background: linear-gradient(45deg, var(--badam), transparent);
+    outline: none;
+    border: 2px solid var(--pitch-black);
+    border-radius: 1.5rem;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--pitch-black);
+    color: var(--badam);
+    text-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 30px -2px var(--pitch-black);
+}
+
+
+.mandatory {
+    color: rgba(246, 71, 71, 0.9);
+    font-weight: bold;
+}
+
+@media screen and (max-width:1000px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    .data {
+        margin: 0.5rem 0;
+    }
+
+    .sub-heading {
+        font-size: 1rem;
+    }
+
+    .enter, .enter-text {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        width: 95%;
+    }
+
+    .btn {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+}

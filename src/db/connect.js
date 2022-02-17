@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const db_url = process.env.DB_URI;
 
-mongoose.connect(db_url, {
+
+mongoose.connect("mongodb + srv://aman_khanO_o:Amaan%401234@projects.ouxex.mongodb.net/MFG_Data?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useNewUrlParser: true

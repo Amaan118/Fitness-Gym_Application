@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config("../");
 const express = require("express");
 const path = require("path");
 const session = require("express-session");
@@ -23,11 +23,7 @@ app.use(cookie_parser());
 app.use(session({
     secret: process.env.SECRET_KEY,
     resave: false,
-    saveUninitialized: true,
-    cookie: {
-        secure: true,
-        httpOnly: true
-    }
+    saveUninitialized: false
 }));
 app.use(flash());
 

@@ -17,7 +17,7 @@ block body
             p.text-center.heading Purchase #{details.plan} Pack
             form(action="/purchase", method="post")
                 p.text-center
-                    marquee Paypal and UPI are currently not availablle. Mandatory fields are marked by <span class="mandatory">*</span>
+                    marquee Paypal and UPI are currently not available. Mandatory fields are marked by <span class="mandatory">*</span>
                 div.data
                     label.text-center.sub-heading(for="name") Name of Customer <span class="mandatory">*</span>
                     input.text-center.enter(type="text", name="name", value=details.customer, required)

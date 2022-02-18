@@ -163,7 +163,7 @@ app.post("/purchase", auth, async (req, res) => {
         });
         await customer.save();
 
-        req.flash("success", `Thank ${req.user.username} you for the Purchase. You will recieve the order soon!`);
+        req.flash("success", `Thank ${req.user.username} for the Purchase. You will recieve the order soon!`);
         res.redirect("/purchase");
 
     } catch (err) {

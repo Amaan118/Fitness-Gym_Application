@@ -216,7 +216,8 @@ app.post("/register", async (req, res) => {
             const token = await user_to_register.generateAuthToken();
             res.cookie("mfg_cookie", token, {
                 expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
-                httpOnly: true
+                httpOnly: true,
+                secure: true
             });
 
             req.flash("success", `Hello ${req.body.username}. Welcome to Magic Fitness Gym's Elites!!`);
@@ -259,7 +260,8 @@ app.post("/login", async (req, res) => {
 
                 res.cookie("mfg_cookie", token, {
                     expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
-                    httpOnly: true
+                    httpOnly: true,
+                    secure: true
                 });
 
                 req.flash("success", `Welcome Back ${user.username}`);

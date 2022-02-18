@@ -1,0 +1,36 @@
+extends navbar.pug
+
+block title
+    title Purchase history of #{user.username} | Magic Fitness Gym
+
+block style
+    link(rel="stylesheet", href="css/purchased.css")
+
+block body
+    main
+        != messages('message', locals)
+        
+        .purchases
+            if notEmpty
+                each record in data
+                    .box 
+                        p.heading Customer Name : #{record.name}
+                        p.content Contact Details : #{record.contact}
+                        p.content Email Address : #{record.email}
+                        p.content Payment Mehtod : #{record.payment_method}
+                        p.content Price : #{record.price}
+                        p.content Pack : #{record.pack}
+                        p.right #{record.date.toString().substr(0, 15)}
+            else
+                .box 
+                    p.heading Customer Name : 
+                    p.content Contact Details : 
+                    p.content Email Address : 
+                    p.content Payment Mehtod : 
+                    p.content Price : 
+                    p.content Pack : 
+                    p.right
+            
+        
+        form(action="/purchase_history", method="post")
+            button.btn(type="submit") Delete Purchase History

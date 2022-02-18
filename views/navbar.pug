@@ -4,9 +4,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="shortcut icon", href="images/logo1.jpeg", type="image/x-icon")
+        link(rel="shortcut icon", href="images/logo.png", type="image/x-icon")
         link(rel="stylesheet", href="css/navbar.css")
         script(src="javascript/cut_btn.js" defer) 
+        script(src="javascript/hamburger.js" defer) 
         
         block title
         block style
@@ -14,9 +15,9 @@ html(lang="en")
         block script
     
     body
-        nav#navigation 
+        nav#navigation <span> Magic Fitness Gym </span>
             ul.nav 
-                img.logo(src="images/logo2.png", alt="Magic Gym")
+                img.logo(src="images/logo.png", alt="Magic Gym")
                 li.item 
                     a(href="/") Home
                 li.item 
@@ -26,11 +27,17 @@ html(lang="en")
                 li.item 
                     a(href="/buy") Buy Membership
                 if(isAuthenticated)
-                    li.item 
+                    li.item
+                        a(href="/purchase_history") Purchase History
+                    li.item
                         a(href="/end_session") Logout
                 else
                     li.item
                         a(href="/login") Login
+            
+            button.hamburger
+                img.menuIcon(src="images/menu.svg")
+                img.closeIcon(src="images/crop.svg")
 
         block body        
 

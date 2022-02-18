@@ -62,7 +62,9 @@ let details = {
 };
 
 const transport = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
         type: "OAuth2",
         user: process.env.EMAIL_FEEDBACK,
@@ -103,19 +105,14 @@ app.post("/contact", async (req, res) => {
             text: `Message : ${req.body.mail_data} \nContact Number : ${req.body.contact} \nAddress : ${req.body.address} \nfrom : ${req.body.email}`
         };
 
-        transport.sendMail(mail_data, function (err) {
-            if (err) {
-                req.flash("fail", "Something went wrong. Please try again later.");
-                res.redirect("/contact");
-            }
-            else {
-                req.flash("success", "Thanks for the Feedback. We will reach out to you soon!");
-                res.redirect("/contact");
-            }
-        });
+        await transport.sendMail(mail_data);
+
+        req.flash("success", "Thanks for the Feedback. We will reach out to you soon!");
+        res.redirect("/contact");
 
     } catch (err) {
-        req.flash("fail", "Something went wrong. Please try again later.");
+        console.log(err);
+        req.flash("fail", "Server was unable to send email. Please try again after sometime.");
         res.redirect("/contact");
     }
 });
@@ -148,14 +145,22 @@ app.post("/buy", auth, async (req, res) => {
 
 app.get("/purchase", (req, res) => {
     res.status(200).render("purchase_form", { details: details });
-})
+});
 
 
 app.post("/purchase", auth, async (req, res) => {
     try {
         const customer = req.user;
 
-        customer.purchase_data = customer.purchase_data.concat(req.body);
+        customer.purchase_data = customer.purchase_data.concat({
+            name: req.body.name,
+            contact: req.body.contact,
+            email: req.body.email,
+            address: req.body.address,
+            payment_method: req.body.payment_method,
+            price: req.body.price,
+            pack: req.body.pack
+        });
         await customer.save();
 
         req.flash("success", `Thank ${req.user.username} you for the Purchase. You will recieve the order soon!`);
@@ -166,6 +171,35 @@ app.post("/purchase", auth, async (req, res) => {
         res.redirect("/purchase");
     }
 });
+
+
+app.get("/purchase_history", auth, (req, res) => {
+    let notEmpty = true;
+    if (Object.keys(req.user.purchase_data).length === 0) {
+        notEmpty = false;
+    }
+    res.status(200).render("purchased", { user: req.user, data: req.user.purchase_data, notEmpty: notEmpty });
+});
+
+
+app.post("/purchase_history", auth, async (req, res) => {
+    try {
+        if (Object.keys(req.user.purchase_data).length === 0) {
+            throw new Error("No Purchase history found ! You broke af!!")
+        }
+
+        req.user.purchase_data = [];
+        await req.user.save();
+
+        req.flash("info", "Deleted Purchase History !! ");
+        res.redirect("/purchase_history");
+    } catch (err) {
+        req.flash("fail", `${err.toString()}`);
+        res.redirect("/purchase_history");
+    }
+
+});
+
 
 app.get("/register", (req, res) => {
     res.status(200).render("register");
@@ -236,7 +270,7 @@ app.post("/login", async (req, res) => {
             }
         }
     } catch (err) {
-        req.flash("fail", `${err}`);
+        req.flash("fail", `${err.toString()}`);
         res.redirect("/login");
     }
 });
@@ -256,10 +290,10 @@ app.get("/end_session", auth, async (req, res) => {
             res.redirect("/login");
         }
         else {
-            throw new Error("Please login.");
+            throw new Error("Login to access this feature.");
         }
     } catch (err) {
-        req.flash("fail", `Please login.`);
+        req.flash("fail", "Login to access this feature.");
         res.redirect("/login");
     }
 });

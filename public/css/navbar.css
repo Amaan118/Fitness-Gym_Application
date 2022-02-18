@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;500;600&display=swap');
 
 /* CSS Reset */
 :root {
-    --badam: antiquewhite;
     --pitch-black: #000;
     --grey: rgba(0, 0, 0, 0.75);
     --dim-grey: rgba(0, 0, 0, 0.25);
@@ -16,7 +15,7 @@
 
 body {
     min-height: 100vh;
-    font-family: 'Lobster', cursive;
+    font-family: 'Genos', cursive;
 }
 
 
@@ -30,7 +29,7 @@ body {
     width: 75%;
     text-align: center;
     margin: auto;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #ffffff;
     text-shadow: 0px 0px 5px #fff2f2;
     border-radius: 15px;
@@ -64,7 +63,6 @@ body {
 
 .text-center {
     text-align: center;
-    font-weight: lighter;
 }
 
 /* Navigation Bar */
@@ -73,11 +71,21 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--badam);
     position: sticky;
     top: 0;
     z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #fff;
 }
+
+#navigation span {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
 
 .nav {
     display: flex;
@@ -85,13 +93,14 @@ body {
     align-items: center;
     list-style: none;
     width: 100%;
+    font-weight: 500;
 }
 
 .logo {
     width: 5%;
     margin: 0 1rem;
     border-radius: 50%;
-    box-shadow: 0px 0px 18px -1px var(--pitch-black);
+    box-shadow: 0px 0px 18px -1px #fff;
 }
 
 .item {
@@ -100,10 +109,10 @@ body {
 
 .item a {
     text-decoration: none;
-    color: var(--pitch-black);
-    font-size: 1.1rem;
+    color: #fff;
+    font-size: 1.3rem;
     padding: 5px 16px;
-    border: 2px solid var(--pitch-black);
+    border: 2px solid #fff;
     border-radius: 15px;
     cursor: pointer;
     outline: none;
@@ -111,39 +120,50 @@ body {
 }
 
 .item a:hover, .active {
-    color: var(--badam);
-    background-color: var(--pitch-black);
-    border: 2px solid var(--badam);
-    outline: none;
-    box-shadow: 0px 0px 18px -3px var(--pitch-black);
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 18px -3px #fff;
 }
 
 /* Footer */
 
 #footer {
-    background-color: var(--badam);
-    border: 1px solid var(--pitch-black);
+    border: 1px solid #fff;
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #footer p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
 }
 
 #footer a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
-    color: var(--pitch-black);
+    color: #fff;
 }
 
 @media screen and (max-width:1000px) {
     /* Navigation Bar */
 
     #navigation {
-        height: 3rem;
+        /* height: 3rem; */
+        padding: 0.5rem 0;
+    }
+
+    #navigation span {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        text-shadow: 0 0 6px #fff;
+        transform: translateY(-3px);
+        margin: auto;
     }
 
     .success, .danger, .info {
@@ -152,29 +172,56 @@ body {
     }
 
     .nav {
-        justify-content: center;
+        position: absolute;
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        flex-flow: column;
+        background: rgba(0, 0, 0, 0.9);
+        top: 0;
+        grid-row-gap: 1rem;
     }
 
-    .logo {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        left: 1rem;
+        cursor: pointer;
+    }
+
+    .menuIcon, .closeIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #fff;
+    }
+
+    .closeIcon {
         display: none;
     }
 
+    .logo {
+        width: 13%;
+        margin: auto;
+    }
+
     .item {
-        margin: 2px;
+        text-align: center;
+        margin: 0.5rem 0;
     }
 
     .item a {
-        font-size: 0.8rem;
-        padding: 7px;
+        padding: 0.5rem 1rem;
+        border: none;
     }
 
     /* Footer */
 
     #footer p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     #footer a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }

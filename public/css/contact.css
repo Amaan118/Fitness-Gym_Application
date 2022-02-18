@@ -13,9 +13,11 @@ body {
 /* Form */
 
 .heading {
-    font-size: 2.5rem;
-    padding: 1rem 0;
-    text-shadow: 0px 0px 5px var(--pitch-black);
+    font-size: 3rem;
+    padding: 0.5rem 0;
+    text-shadow: 0px 0px 6px #fff, 0 0 3px #000;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
 }
 
 .container {
@@ -24,7 +26,6 @@ body {
     align-items: center;
     min-height: 83vh;
     flex-direction: column;
-    background: rgba(250, 235, 215, 0.5);
 }
 
 form {
@@ -36,6 +37,8 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
+    padding: 0.5rem 0;
 }
 
 .sub-heading {
@@ -45,15 +48,14 @@ form {
 
 .enter {
     border: 2px solid var(--pitch-black);
-    font-family: 'Lobster', cursive;
+    font-family: 'Genos', cursive;
     width: 50%;
     padding: 0.5rem;
-    font-size: 1rem;
     outline: none;
-    background: linear-gradient(45deg, var(--badam), transparent);
     border-radius: 1.5rem;
-    color: var(--pitch-black);
-    font-weight: lighter;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .enter-text {
@@ -70,17 +72,21 @@ form {
     height: 7rem;
 }
 
+.enter:hover, .enter:focus, .enter-text:hover, .enter-text:focus {
+    box-shadow: 0 0 16px -5px #000;
+}
+
 .btn-container {
     text-align: center;
     padding: 1.5rem 0;
 }
 
 .btn {
-    font-family: 'Lobster';
-    font-size: 1rem;
+    font-family: 'Genos', cursive;
+    font-size: 1.3rem;
+    font-weight: 400;
     width: 50%;
     padding: 0.4rem 0;
-    background: linear-gradient(45deg, var(--badam), transparent);
     outline: none;
     border: 2px solid var(--pitch-black);
     border-radius: 1.5rem;
@@ -90,9 +96,10 @@ form {
 
 .btn:hover {
     background: var(--pitch-black);
-    color: var(--badam);
+    color: #fff;
+    border: 2px solid #fff;
     text-shadow: 0px 0px 5px white;
-    box-shadow: 0px 0px 30px -2px var(--pitch-black);
+    box-shadow: 0px 0px 23px -2px var(--pitch-black);
 }
 
 
@@ -112,6 +119,7 @@ form {
 
     .data {
         margin: 0.5rem 0;
+        padding: 0;
     }
 
     .sub-heading {

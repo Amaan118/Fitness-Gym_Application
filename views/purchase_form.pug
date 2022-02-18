@@ -11,13 +11,13 @@ block script
 
 block body
     main
-        != messages('message', locals)        
+        != messages('message', locals)
 
         div.container
             p.text-center.heading Purchase #{details.plan} Pack
             form(action="/purchase", method="post")
                 p.text-center
-                    marquee All the data of our users purchase are kept safe and secret at our system. Mandatory fields are marked by <span class="mandatory">*</span>
+                    marquee Paypal and UPI are currently not availablle. Mandatory fields are marked by <span class="mandatory">*</span>
                 div.data
                     label.text-center.sub-heading(for="name") Name of Customer <span class="mandatory">*</span>
                     input.text-center.enter(type="text", name="name", value=details.customer, required)
@@ -49,8 +49,8 @@ block body
                     label.text-center.sub-heading(for="payment") Select Payment Method <span class="mandatory">*</span>
                     select.enter(name='payment_method', required)
                         option.text-center(value='cod') Cash on delievery
-                        option.text-center(value='upi') UPI
-                        option.text-center(value='paypal') Paypal
+                        option.text-center(value='upi', disabled) UPI
+                        option.text-center(value='paypal', disabled) Paypal
                 
                 input(type="hidden", name="price", value=details.price)
                 input(type="hidden", name="pack", value=details.plan)

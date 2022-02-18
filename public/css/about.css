@@ -8,13 +8,14 @@
 
 body {
     min-height: 100vh;
+    background: url('../images/about.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(2px);
 }
 
 /* About Section */
 
 #about {
     min-height: 90vh;
-    background: url('../images/about.jpg') no-repeat center center/cover;
     padding-left: 4rem;
     display: flex;
     justify-content: center;
@@ -32,15 +33,15 @@ body {
 
 .heading {
     color: white;
-    font-weight: lighter;
     font-size: 3rem;
     text-shadow: 0px 0px 5px white;
+    font-weight: 300;
 }
 
 .sub-heading {
     color: white;
-    font-weight: lighter;
-    font-size: 1.2rem;
+    font-weight: 300;
+    font-size: 1.3rem;
     text-shadow: 0px 0px 5px black;
 }
 
@@ -51,6 +52,7 @@ body {
     box-shadow: 0px 0px 25px -2px antiquewhite;
     border: 2px solid antiquewhite;
     margin: 1rem 0;
+    width: 85%;
 }
 
 /* Achieve Section */
@@ -93,6 +95,7 @@ body {
 
     .story, .work {
         margin: 0.5rem 0;
+        width: 95%;
     }
 
     .heading {
@@ -110,7 +113,7 @@ body {
         transform: translateX(0);
         margin: auto;
         min-height: 0;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 

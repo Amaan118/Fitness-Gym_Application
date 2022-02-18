@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
+const date = new Date(Date.now());
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -65,6 +65,17 @@ const userSchema = new mongoose.Schema({
         }
     },
     purchase_data: [{
+        name: String,
+        contact: String,
+        email: String,
+        address: String,
+        payment_method: String,
+        price: Number,
+        pack: String,
+        date: {
+            type: Date,
+            default: date.toDateString()
+        }
     }],
     tokens: [{
     }]

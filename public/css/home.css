@@ -8,7 +8,7 @@
 
 body {
     min-height: 100vh;
-    background: url("../images/home-bg.jpg") no-repeat center center/cover;
+    background: url("../images/home-bg.webp") no-repeat center center/cover;
     backdrop-filter: blur(2px);
 }
 
@@ -42,7 +42,7 @@ main {
 
 .heading {
     font-size: 4rem;
-    color: #000;
+    color: #fff;
     text-shadow: 0 0 0.75rem #000, 0 0 1rem #fff;
     transition: all 0.5s;
 }
@@ -50,7 +50,7 @@ main {
 
 .sub-heading {
     font-size: 1.5rem;
-    color: #000;
+    color: #fff;
     text-shadow: 0 0 0.2rem #000, 0 0 0.25rem #fff;
 }
 
@@ -58,12 +58,12 @@ main {
 
 #services {
     min-height: 45vh;
+    background: #fff;
 }
 
 .header {
     font-size: 3rem;
     padding: 1rem 0;
-    text-shadow: 0 0 0.75rem #000, 0 0 1rem #fff;
 }
 
 .options {
@@ -103,6 +103,7 @@ main {
 
     .heading {
         font-size: 2rem;
+        color: #fff;
     }
 
     /* Services Section */
@@ -118,12 +119,13 @@ main {
     }
 
     .sub-heading {
-        color: var(--badam);
+        color: #fff;
         font-size: 1rem;
     }
 
     .step {
         margin: 1rem;
+        padding: 0.5rem;
     }
 
     .step img {

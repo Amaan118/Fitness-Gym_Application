@@ -7,7 +7,10 @@ html(lang="en")
         link(rel="shortcut icon", href="images/logo.png", type="image/x-icon")
         link(rel="stylesheet", href="css/navbar.css")
         script(src="javascript/cut_btn.js" defer) 
-        script(src="javascript/hamburger.js" defer) 
+        script(src="javascript/hamburger.js" defer)
+
+        script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer)
+        script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer)
         
         block title
         block style
@@ -36,8 +39,8 @@ html(lang="en")
                         a(href="/login") Login
             
             button.hamburger
-                img.menuIcon(src="images/menu.svg")
-                img.closeIcon(src="images/crop.svg")
+                | <ion-icon class="menuIcon" name="menu-outline"></ion-icon>
+                | <ion-icon class="closeIcon" name="close-outline"></ion-icon>
 
         block body        
 

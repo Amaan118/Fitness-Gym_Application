@@ -18,7 +18,7 @@ main {
 
 main::before {
     content: "";
-    background: url("../images/form-bg.jpeg") no-repeat center center/cover;
+    background: url("../images/form-bg.webp") no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -79,7 +79,7 @@ marquee {
     padding: 0.5rem;
     font-size: 1.2em;
     outline: none;
-    background: linear-gradient(45deg, var(--badam), #fff);
+    background: linear-gradient(45deg, #fff, antiquewhite);
     border-radius: 0.7em;
     margin-bottom: 0.5rem;
 }

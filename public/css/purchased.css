@@ -1,7 +1,7 @@
 /* CSS */
 
 body {
-    background: url("../images/purchased-bg.jpg") no-repeat center center/cover;
+    background: url("../images/purchased-bg.webp") no-repeat center center/cover;
     backdrop-filter: blur(2px);
 }
 
@@ -45,6 +45,7 @@ main {
 }
 
 .right {
+    color: #fff;
     position: absolute;
     font-size: 1.3rem;
     bottom: 1%;
@@ -82,7 +83,7 @@ form {
 
 @media screen and (max-width:1000px) {
     body {
-        background: url("../images/purchased-bg2.jpg") no-repeat center center/cover;
+        background: url("../images/purchased-bg2.webp") no-repeat center center/cover;
     }
 
     .purchases {
@@ -91,6 +92,10 @@ form {
         align-items: center;
         flex-flow: column wrap;
         width: 100%;
+    }
+
+    .box:nth-last-child(1) {
+        margin-bottom: 3rem;
     }
 
     .box {
@@ -107,7 +112,7 @@ form {
 
     .right {
         font-size: 1rem;
-        text-shadow: 0 0 1px #fff;
+        color: #fff;
     }
 
     form {

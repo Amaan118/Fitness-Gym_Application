@@ -2,7 +2,6 @@
 /* CSS Reset */
 
 :root {
-    --badam: antiquewhite;
     --pitch-black: #000;
 }
 
@@ -14,7 +13,7 @@
 
 body {
     min-height: 100vh;
-    background: url('../images/register-bg1.jpg') no-repeat center center/cover;
+    background: url('../images/register-bg1.webp') no-repeat center center/cover;
     font-family: 'Genos', sans-serif;
     backdrop-filter: blur(2px);
 }
@@ -106,7 +105,7 @@ body {
 
 .user-data {
     font-family: 'Genos', sans-serif;
-    color: var(--badam);
+    color: #fff;
     background: none;
     outline: none;
     border: 0;
@@ -118,8 +117,8 @@ body {
 }
 
 .user-data:hover, .user-data:focus {
-    border-bottom: 1px solid var(--badam);
-    color: var(--badam);
+    border-bottom: 1px solid #fff;
+    color: #fff;
 }
 
 ::placeholder {
@@ -133,7 +132,7 @@ body {
     grid-column: 1 / span 2;
     text-align: center;
     padding: 2rem 0;
-    border-bottom: 1px solid var(--badam);
+    border-bottom: 1px solid #fff;
 }
 
 .btn {
@@ -141,20 +140,20 @@ body {
     padding: .5rem 1rem;
     background: none;
     outline: none;
-    border: 2px solid var(--badam);
+    border: 2px solid #fff;
     border-radius: .7rem;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--badam);
+    color: #fff;
     cursor: pointer;
     transition: all 0.25s;
 }
 
 .btn:hover {
-    color: var(--badam);
+    color: #fff;
     background: var(--pitch-black);
-    box-shadow: 0px 0px 17px -4px var(--badam);
-    border: 2px solid var(--badam);
+    box-shadow: 0px 0px 17px -4px #fff;
+    border: 2px solid #fff;
 }
 
 .login {
@@ -164,7 +163,7 @@ body {
 }
 
 .login p {
-    color: var(--badam);
+    color: #fff;
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
@@ -186,7 +185,7 @@ body {
 
 #footer p {
     font-size: 1rem;
-    color: var(--badam);
+    color: #fff;
 }
 
 #footer a {
@@ -205,7 +204,7 @@ body {
 
 @media screen and (max-width:1000px) {
     body {
-        background: url('../images/register-bg2.jpg') no-repeat center center/cover;
+        background: url('../images/register-bg2.webp') no-repeat center center/cover;
     }
 
     .container {
@@ -227,11 +226,11 @@ body {
     }
 
     .data h1 {
-        color: var(--badam);
+        color: #fff;
         width: 75%;
         font-size: 2.3rem;
         margin: 1rem 0;
-        border-bottom: 2px dashed var(--badam);
+        border-bottom: 2px dashed #fff;
         text-align: center;
         text-shadow: 0 0 16px var(--pitch-black);
     }
@@ -247,13 +246,13 @@ body {
     .user-data {
         font-size: 1.5rem;
         padding: .2rem 0.5rem;
-        border-bottom: 1px solid var(--badam);
-        color: var(--badam);
+        border-bottom: 1px solid #fff;
+        color: #fff;
         text-shadow: 0 0 9px var(--pitch-black);
     }
 
     ::placeholder {
-        color: var(--badam);
+        color: #fff;
         opacity: 0.8;
     }
 
@@ -261,13 +260,13 @@ body {
         padding: 1rem 0;
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid var(--badam);
+        border-bottom: 1px solid #fff;
     }
 
     .btn {
         font-size: 1rem;
-        color: var(--badam);
-        border: 2px solid var(--badam);
+        color: #fff;
+        border: 2px solid #fff;
     }
 
     .login {
@@ -276,19 +275,19 @@ body {
     }
 
     .login p {
-        color: var(--badam);
+        color: #fff;
     }
 
     /* Footer */
 
     #footer p {
         font-size: 0.8rem;
-        color: var(--badam);
+        color: #fff;
     }
 
     #footer a {
         font-size: 0.8rem;
-        color: var(--badam);
+        color: #fff;
     }
 
     .gymlink {

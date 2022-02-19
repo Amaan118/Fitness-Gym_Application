@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;200;300;400;600&display=swap');
 /* CSS Reset */
 
-:root {
-    --badam: antiquewhite;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    background: url('../images/login-bg2.jpg') no-repeat center center/cover;
+    background: url('../images/login-bg2.webp') no-repeat center center/cover;
     font-family: 'Genos', sans-serif;
 }
 
@@ -81,7 +77,7 @@ body {
     width: 50%;
     filter: drop-shadow(2px 4px 6px black);
     border-radius: 50%;
-    box-shadow: 0 0 33px -7px var(--badam);
+    box-shadow: 0 0 33px -7px #fff;
 }
 
 .data {
@@ -92,10 +88,10 @@ body {
 }
 
 .data h1 {
-    color: var(--badam);
+    color: #fff;
     font-size: 3.5rem;
     padding: .5rem 0;
-    border-bottom: 2px dashed var(--badam);
+    border-bottom: 2px dashed #fff;
     /* width: 50%; */
 }
 
@@ -108,16 +104,16 @@ body {
 
 .box ion-icon {
     font-size: 3em;
-    color: var(--badam);
+    color: #fff;
 }
 
 .user-data {
     font-family: 'Genos', sans-serif;
-    color: var(--badam);
+    color: #fff;
     background: none;
     outline: none;
     border: 0;
-    border-bottom: 1px solid var(--badam);
+    border-bottom: 1px solid #fff;
     font-size: 2em;
     margin: 0 .5rem;
     padding: 0 .5rem;
@@ -129,7 +125,7 @@ body {
 }
 
 ::placeholder {
-    color: var(--badam);
+    color: #fff;
     opacity: 0.8;
 }
 
@@ -137,7 +133,7 @@ body {
 
 .btn-container {
     padding: 2rem 0;
-    border-bottom: 1px solid var(--badam);
+    border-bottom: 1px solid #fff;
 }
 
 .btn {
@@ -145,19 +141,19 @@ body {
     padding: .5rem 1rem;
     background: none;
     outline: none;
-    border: 2px solid var(--badam);
+    border: 2px solid #fff;
     border-radius: .7rem;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--badam);
+    color: #fff;
     cursor: pointer;
     transition: all 0.25s;
 }
 
 .btn:hover {
     color: black;
-    background: var(--badam);
-    box-shadow: 0px 0px 17px -4px var(--badam);
+    background: #fff;
+    box-shadow: 0px 0px 17px -4px #fff;
     border: 2px solid black;
 }
 
@@ -166,7 +162,7 @@ body {
 }
 
 .register p {
-    color: var(--badam);
+    color: #fff;
     font-size: 1.3rem;
     padding: .5rem 0;
     margin-bottom: 1rem;
@@ -179,7 +175,7 @@ body {
 /* Footer */
 
 #footer {
-    color: var(--badam);
+    color: #fff;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -192,14 +188,14 @@ body {
 }
 
 #footer a {
-    color: var(--badam);
+    color: #fff;
     text-decoration: none;
 }
 
 .gymlink {
     font-size: 1.5rem;
     font-weight: bold;
-    background: -webkit-linear-gradient(var(--badam), #000);
+    background: -webkit-linear-gradient(#fff, #000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -207,7 +203,7 @@ body {
 
 @media screen and (max-width:1000px) {
     body {
-        background: url('../images/login-bg1.jpg') no-repeat center center/cover;
+        background: url('../images/login-bg1.webp') no-repeat center center/cover;
         backdrop-filter: blur(2px);
     }
 
@@ -241,7 +237,7 @@ body {
         width: 75%;
         font-size: 2rem;
         margin: 1rem 0;
-        border-bottom: 2px dashed var(--badam);
+        border-bottom: 2px dashed #fff;
         text-align: center;
     }
 
@@ -288,6 +284,6 @@ body {
     .gymlink {
         font-size: 1.2rem;
         line-height: 2.2rem;
-        -webkit-text-fill-color: var(--badam);
+        -webkit-text-fill-color: #fff;
     }
 }

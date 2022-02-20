@@ -45,13 +45,12 @@ body {
     background: rgba(68, 133, 249);
 }
 
+
 #cut {
-    width: 1rem;
-    height: 1rem;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    transform: translate(-10px, -2px);
+    right: 1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -212,8 +211,12 @@ body {
         flex-direction: column;
     }
 
-    .success, .fail, .info {
+    .alert {
         width: 95%;
+        font-size: 0.8rem;
+    }
+
+    #cut {
         font-size: 0.8rem;
     }
 

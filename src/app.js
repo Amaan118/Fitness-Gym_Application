@@ -208,7 +208,17 @@ app.get("/register", (req, res) => {
 
 app.post("/register", async (req, res) => {
     try {
-        if (req.body.password === req.body.confirm_pass) {
+        const username = await User.findOne({ username: req.body.username })
+        if (username) {
+            throw new Error("Username already taken. Please try another one or Login.")
+        }
+
+        const user_mail = await User.findOne({ email: req.body.email })
+        if (user_mail) {
+            throw new Error("Email already in use");
+        }
+
+        else if (req.body.password === req.body.confirm_pass) {
             const user_to_register = User(req.body);
 
             await user_to_register.save();
@@ -229,15 +239,8 @@ app.post("/register", async (req, res) => {
         }
 
     } catch (err) {
-        if (err.code === 11000) {
-            let unique = `${Object.keys(err.keyPattern)[0].toUpperCase()} already in use. Please try with different one.`
-            req.flash("info", `${unique}`);
-            res.redirect("/register");
-        }
-        else {
-            req.flash("info", `${err.toString()}`);
-            res.redirect("/register");
-        }
+        req.flash("info", `${err.toString()}`);
+        res.redirect("/register");
     }
 });
 

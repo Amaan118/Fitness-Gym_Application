@@ -78,7 +78,7 @@ main {
     border-radius: 1rem;
     margin: 0 1.5rem;
     background-color: var(--pitch-black);
-    box-shadow: 0px 0px 19px 0px;
+    box-shadow: 0px 0px 19px 0px #000;
 }
 
 .step p {
@@ -94,9 +94,8 @@ main {
 }
 
 @media screen and (max-width:1000px) {
+
     /* Main Section */
-
-
     .container {
         width: 30%;
     }
@@ -109,8 +108,8 @@ main {
     /* Services Section */
 
     .options {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .header {
@@ -126,6 +125,7 @@ main {
     .step {
         margin: 1rem;
         padding: 0.5rem;
+        box-shadow: 0 0 7px 0px #000;
     }
 
     .step img {

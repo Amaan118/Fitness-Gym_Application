@@ -49,14 +49,14 @@ body {
     background: rgba(68, 133, 249);
 }
 
+
 #cut {
-    width: 1rem;
-    height: 1rem;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    transform: translate(-10px, -2px);
+    right: 1rem;
+    font-size: 1.2rem;
 }
+
 
 
 /* Utility Classes */
@@ -136,6 +136,7 @@ body {
     align-items: center;
     font-weight: 500;
     background: rgba(0, 0, 0, 0.5);
+    flex-flow: column;
 }
 
 #footer p {
@@ -144,7 +145,7 @@ body {
 }
 
 #footer a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     color: #fff;
 }
@@ -166,8 +167,12 @@ body {
         margin: auto;
     }
 
-    .success, .danger, .info {
+    .alert {
         width: 95%;
+        font-size: 0.8rem;
+    }
+
+    #cut {
         font-size: 0.8rem;
     }
 
@@ -226,6 +231,6 @@ body {
     }
 
     #footer a {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

@@ -218,6 +218,11 @@ app.post("/register", async (req, res) => {
             throw new Error("Email already in use");
         }
 
+        if (res.locals.isAuthenticated) {
+            req.flash("info", "Already logged in.");
+            res.redirect("/home");
+        }
+
         else if (req.body.password === req.body.confirm_pass) {
             const user_to_register = User(req.body);
 

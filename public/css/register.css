@@ -80,7 +80,7 @@ body {
     background: url('../images/register-bg1.webp') no-repeat center center/cover;
     min-height: inherit;
     width: 100%;
-    filter: blur(2px);
+    filter: blur(3px);
     z-index: -1;
 }
 
@@ -224,7 +224,7 @@ body {
 
     .container::before {
         background: url('../images/about-bg2.webp') no-repeat center center/cover;
-        padding: 1rem;
+        padding: 2rem 0;
     }
 
     .alert {

@@ -24,7 +24,6 @@ body {
     width: 100%;
     margin-bottom: -50px;
     z-index: 2;
-    margin-top: 10px;
 }
 
 
@@ -83,7 +82,6 @@ body {
     width: 100%;
     filter: blur(2px);
     z-index: -1;
-
 }
 
 .data {
@@ -221,11 +219,12 @@ body {
     .container {
         width: 100vw;
         flex-direction: column;
-        min-height: 105vh;
+        min-height: 100vh;
     }
 
     .container::before {
-        background: url('../images/register-bg2.webp') no-repeat center center/cover;
+        background: url('../images/about-bg2.webp') no-repeat center center/cover;
+        padding: 1rem;
     }
 
     .alert {

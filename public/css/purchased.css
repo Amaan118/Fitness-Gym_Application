@@ -1,13 +1,21 @@
 /* CSS */
 
-body {
-    background: url("../images/purchased-bg.webp") no-repeat center center/cover;
-    backdrop-filter: blur(2px);
-}
 
 main {
     min-height: 90vh;
     position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/purchased-bg.webp") no-repeat center center/cover;
+    min-height: inherit;
+    width: 100%;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 .purchases {
@@ -82,7 +90,7 @@ form {
 
 
 @media screen and (max-width:1000px) {
-    body {
+    main::before {
         background: url("../images/purchased-bg2.webp") no-repeat center center/cover;
     }
 

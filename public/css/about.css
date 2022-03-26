@@ -8,18 +8,28 @@
 
 body {
     min-height: 100vh;
-    background: url('../images/about.webp') no-repeat center center/cover;
-    backdrop-filter: blur(2px);
+    /* background: url('../images/about.webp') no-repeat center center/cover; */
+    /* backdrop-filter: blur(2px); */
 }
 
 /* About Section */
 
 #about {
     min-height: 90vh;
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    min-height: inherit;
+    width: 100%;
+    background: url('../images/about.webp') no-repeat center center/cover;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 .container {
@@ -82,9 +92,12 @@ body {
     /* About Section */
     #about {
         flex-direction: column;
-        padding: 1rem 0;
         display: block;
         margin: auto;
+    }
+
+    #about::before {
+        background: none;
     }
 
     .container {
@@ -109,12 +122,11 @@ body {
     /* Achieve Section */
 
     .achieve {
-        width: 90%;
+        width: 70%;
         transform: translateX(0);
         margin: auto;
         min-height: 0;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     .record {

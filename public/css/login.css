@@ -9,7 +9,6 @@
 
 body {
     min-height: 100vh;
-    background: url('../images/login-bg2.webp') no-repeat center center/cover;
     font-family: 'Genos', sans-serif;
 }
 
@@ -18,6 +17,9 @@ body {
 
 .messages {
     width: 100%;
+    margin-bottom: -50px;
+    z-index: 2;
+    margin-top: 10px;
 }
 
 
@@ -63,8 +65,22 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    min-height: 90vh;
+    min-height: 100vh;
+    z-index: -1;
 }
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: inherit;
+    width: 100%;
+    background: url('../images/login-bg2.webp') no-repeat center center/cover;
+    z-index: -1;
+}
+
 
 .logo-container {
     text-align: center;
@@ -180,6 +196,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 2rem;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #footer p {
@@ -202,14 +219,20 @@ body {
 
 @media screen and (max-width:1000px) {
     body {
-        background: url('../images/login-bg1.webp') no-repeat center center/cover;
-        backdrop-filter: blur(2px);
+        /* background: url('../images/login-bg1.webp') no-repeat center center/cover; */
+        /* backdrop-filter: blur(2px); */
     }
 
     .container {
-        width: 95vw;
+        width: 100vw;
         flex-direction: column;
     }
+
+    .container::before {
+        background: url('../images/login-bg1.webp') no-repeat center center/cover;
+        filter: blur(2px);
+    }
+
 
     .alert {
         width: 95%;

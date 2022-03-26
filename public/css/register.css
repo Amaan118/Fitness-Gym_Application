@@ -13,16 +13,18 @@
 
 body {
     min-height: 100vh;
-    background: url('../images/register-bg1.webp') no-repeat center center/cover;
     font-family: 'Genos', sans-serif;
-    backdrop-filter: blur(2px);
 }
 
 
 /* Flash Messages */
 
+
 .messages {
     width: 100%;
+    margin-bottom: -50px;
+    z-index: 2;
+    margin-top: 10px;
 }
 
 
@@ -68,7 +70,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    min-height: 90vh;
+    min-height: 95vh;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/register-bg1.webp') no-repeat center center/cover;
+    min-height: inherit;
+    width: 100%;
+    filter: blur(2px);
+    z-index: -1;
+
 }
 
 .data {
@@ -180,6 +195,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 2rem;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #footer p {
@@ -202,13 +218,14 @@ body {
 
 
 @media screen and (max-width:1000px) {
-    body {
-        background: url('../images/register-bg2.webp') no-repeat center center/cover;
+    .container {
+        width: 100vw;
+        flex-direction: column;
+        min-height: 105vh;
     }
 
-    .container {
-        width: 95vw;
-        flex-direction: column;
+    .container::before {
+        background: url('../images/register-bg2.webp') no-repeat center center/cover;
     }
 
     .alert {

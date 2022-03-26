@@ -25,6 +25,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: -1;
     background: url("../images/home-bg.webp") no-repeat center center/cover;
 }
 

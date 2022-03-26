@@ -23,6 +23,9 @@ body {
 
 .messages {
     width: 100%;
+    margin-bottom: -50px;
+    z-index: 2;
+    margin-top: 10px;
 }
 
 .alert {

@@ -8,8 +8,6 @@
 
 body {
     min-height: 100vh;
-    background: url("../images/home-bg.webp") no-repeat center center/cover;
-    backdrop-filter: blur(2px);
 }
 
 /* Main Section */
@@ -27,6 +25,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url("../images/home-bg.webp") no-repeat center center/cover;
 }
 
 .container {

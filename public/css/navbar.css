@@ -74,7 +74,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid #fff;
 }
 
@@ -84,6 +84,7 @@ body {
 
 .hamburger {
     display: none;
+    transition: all 0.5s;
 }
 
 
@@ -135,7 +136,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     flex-flow: column;
 }
 
@@ -185,6 +186,7 @@ body {
         background: rgba(0, 0, 0, 0.9);
         top: 0;
         grid-row-gap: 1rem;
+        transition: all 0.5s;
     }
 
     .hamburger {

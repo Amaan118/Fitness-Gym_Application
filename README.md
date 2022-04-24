@@ -10,7 +10,7 @@ When  user wants to login the id is then matchhed with token to authorize the us
 Frontend consist of HTML. The view engine used is Pug. We use view engine to access variables in HTML pages. Have not used any external css. And used JavaScript to implement the Hamburger menu and cross mark for flash notifications.
 
 **Database** :
-MongoDb database is used. SInce it is flexible and not sql its the best choice to use in this scenario. Stores username, password (hashed), purchase history, tokens, email and other stuff.
+MongoDb database is used. Since it is flexible and not sql its the best choice to use in this scenario. Stores username, password (hashed), purchase history, tokens, email and other stuff.
 Hosted on Mongo Atlas.
 
 **Deploy** :
@@ -18,8 +18,11 @@ Deployed on heroku. A free web hosting platform.
 
 
 **Running the Application** :
-Step 1 - run commmand "npm install"
-To install all the dependencies in the package.json
+Step 1 - Clone the repo on your local device
+
+Step 2 - run commmand "npm install"
+To install all the dependencies in the package.json. A new folder named node_modules will be created which will consist of all modules.
 
 Step 2 - npm run dev
-Starts the application using nodemon extension.
+Starts the application using dev script in package.json.
+npm run dev will fire the command nodemon src/inedx.js -e js,ejs,pug 

@@ -26,3 +26,7 @@ To install all the dependencies in the package.json. A new folder named node_mod
 Step 2 - npm run dev
 Starts the application using dev script in package.json.
 npm run dev will fire the command nodemon src/inedx.js -e js,ejs,pug 
+
+
+**Visit the application here** :
+https://magic-fitness-gym.herokuapp.com/
